@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "inventorybuttons",
+	"version": "${version}",
+	"name": "inventorybuttons",
+	"description": "Adds custom clickable command buttons to inventory screens.",
+	"authors": [
+		"afranz29",
+		"26.1 port: ChatGPT best-effort"
+	],
+	"contact": {
+		"homepage": "https://github.com/afranz29/Inventory-Buttons",
+		"sources": "https://github.com/afranz29/Inventory-Buttons"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/inventorybuttons/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.panda.inventorybuttons.InventoryButtonsClient"
+		]
+	},
+	"mixins": [
+		"inventorybuttons.mixins.json",
+		{
+			"config": "inventorybuttons.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": ">=26.1 <=26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
